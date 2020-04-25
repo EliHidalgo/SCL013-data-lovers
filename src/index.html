@@ -3,11 +3,83 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
+    <img src="imagenes/header.png" id="logo"> 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <h1>prueba</h1>
+   
     <div id="root"></div>
+
+<!--contenedor de botones de filtrado-->
+
+<select id="selectType"  class="droplists">
+  <option value="">Tipo de PoKémon:</option>
+  <option value="All">Todos</option>
+  <option value="Water">Agua</option>
+  <option value="Fire">Fuego</option>
+  <option value="Normal">Normal</option>
+  <option value="Grass">Planta</option>
+  <option value="Electric">Eléctrico</option>
+  <option value="Ice">Hielo</option>
+  <option value="Fighting">Pelea</option>
+  <option value="Poison">Veneno</option>
+  <option value="Ground">Tierra</option>
+  <option value="Flying">Volador</option>
+  <option value="Psychic">Psíquicos</option>
+  <option value="Bug">Bicho</option>
+  <option value="Rock">Roca</option>
+  <option value="Ghost">Fantasma</option>
+  <option value="Dragon">Dragón</option>
+</select>
+
+<select id="selectWeak" class="droplists">
+  <option value="">Debilidades</option>
+  <option value="Water">Agua</option>
+  <option value="Fire">Fuego</option>
+  <option value="Grass">Planta</option>
+  <option value="Electric">Eléctrico</option>
+  <option value="Ice">Hielo</option>
+  <option value="Fighting">Pelea</option>
+  <option value="Poison">Veneno</option>
+  <option value="Ground">Tierra</option>
+  <option value="Flying">Volador</option>
+  <option value="Psychic">Psíquicos</option>
+  <option value="Bug">Bicho</option>
+  <option value="Rock">Roca</option>
+  <option value="Ghost">Fantasma</option>
+  <option value="Dragon">Dragón</option>
+  <option value="Dark">Siniéstro</option>
+  <option value="Steel">Metal</option>
+  <option value="Fairy">Hada</option>
+</select>
+
+<select id="selectOrder" class="droplists">
+  <option value="aToZ">A-Z</option>
+  <option value="zToA">Z-A</option>
+
+  <!--busqueda input-->
+
+  <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"></input>
+
+
+
+
+
+
+
+</select>
+
+
+
+
+
+
+
+
+
+
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
