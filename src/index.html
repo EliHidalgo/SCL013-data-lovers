@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />  
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/3b4f19e26f.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -66,25 +67,42 @@
 </select>
   <!--busqueda input-->
 
-  <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"></input>
+  <div id = "searchInput">
+  <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"></input><i class="search fas fa-search"></i>
+</div>
 </section>
 
-  <section id="welcome">
-    <div>
-    <h1>PoKeDaTa GO </h1>
+  <section id="welcomePage">
+  <div id = "welcome" class = "welcomeText">
+    <h1>PoKéDaTa GO </h1>
     <p>Es una web dirigida a todos los jugadores amantes de Pokémon GO.</p>
     <p>En nuestra página podrás encontrar tus pokémon por tipo y debilidades, así como conocer las características de tu pokémon favorito o el de tu contrincante.</p>
     <h2>¡Explora y conviertete en el mejor Entrenador Pokémon!</h2>
   </div>
     
   <div class = "pokeFriends">
-    <img src="imagenes/pokemon-bienvenida.jpg" id = "welcomeImage" >
+    <img src="imagenes/pokeFriends-inicio.jpg" id = "welcomeImage" >
   </div>
 
   </section>
 
   <div id="root"></div>
   
+  <footer id = "footer">
+    <div class = "copyright">
+      <p class = "footerCopyright">PoKeDaTa GO 2020. Derechos Reservados. Desarrollo e implementación por Eliana Hidalgo y Paula Plaza</p>
+    </div>
+
+    <div class = "socialMedia">
+      <a href="https://www.youtube.com/user/pokemon" target = "_blank"><i class="icon fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/pokemon/"  target = "_blank"><i class="icon fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/Pokemon/"  target = "_blank"><i class="icon fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/pokemon"  target = "_blank"><i class="icon fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
   <script src="main.js" type="module"></script>
-  </body>
+  
+</body>
+
 </html>

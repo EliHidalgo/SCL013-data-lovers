@@ -1,8 +1,13 @@
 /*Pokedata GO header*/
+body {
+    margin: 0px;
+}
+
 #logo {
     background-attachment: scroll, fixed;
-    background-position: center center;
-    background-size: cover;
+    background-position-x: left, center;
+    background-position-y: top, center;
+    background-size: auto, cover;
     width: 100%;
     height: auto;
     left: 0px;
@@ -11,7 +16,7 @@
 
 #menu {
     position: center;
-    background: #004B8C;
+    background: #FB272A;  /* #FFC800; #004B8C;*/
     width: 100%;
     height: 55px;
     left: 0px;
@@ -19,17 +24,18 @@
     line-height: 30px;
     display: flex;
     justify-content: space-between;
-    background-color: #004B8C;
+    background-color: #FB272A;        /* #FFC800; #004B8C;*/
 }
 
 .droplists{
-    background-color: #004B8C;
+    background-color: #FB272A;
     border-color: transparent;
     color: #FFFFFF;
     font-family: sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 15px;
+    margin-left: 20px;
 }
 
 #searchBar {
@@ -39,12 +45,79 @@
     align-self: center;
     border-radius: 5px;
     background: #FFFFFF; 
-    
+    margin-right: 10px;
+}
+
+#searchInput {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #FFFFFF;
+}
+
+#welcomePage {
+    display: flex;
+    margin-top: 100px;
+    justify-items: center;    
+}
+
+#welcome {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 10%;
+    flex-direction:column;
 }
 
 .pokeFriends {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-self: center;
+    padding-right: 5%;
+    padding-bottom: 10%;   
 }
 
+h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 18px;
+}
+
+#footer{
+    background-color: #FB272A;
+    height: 30px;
+    display: flex;
+}
+
+.footerCopyright {
+    display:flex;
+    font-style: normal;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.socialMedia {
+    display: flex;
+    margin-left: 50%;
+    justify-content: space-between; 
+    align-items: center;  
+}
+
+.icon {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 20px; 
+}
