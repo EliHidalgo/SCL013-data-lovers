@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <img src="imagenes/header.png" id="logo"> 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />  
   </head>
 
   <body>
    
-    <div id="root"></div>
+   
+<!-- Header y logo -->
+<section id ="header">
+<a href="index.html" title="Home" class="pokeDataImage">
+  <img src="imagenes/header.png" alt="header Pokedata" id="logo">
+</a>
+</section>
 
 <!--contenedor de botones de filtrado-->
-
+<section id= "menu">
 <select id="selectType"  class="droplists">
-  <option value="">Tipo de PoKémon:</option>
+  <option value="">TIPO DE POKÉMON</option>
   <option value="All">Todos</option>
   <option value="Water">Agua</option>
   <option value="Fire">Fuego</option>
@@ -34,7 +39,7 @@
 </select>
 
 <select id="selectWeak" class="droplists">
-  <option value="">Debilidades</option>
+  <option value="">DEBILIDAD CONTRA</option>
   <option value="Water">Agua</option>
   <option value="Fire">Fuego</option>
   <option value="Grass">Planta</option>
@@ -55,31 +60,31 @@
 </select>
 
 <select id="selectOrder" class="droplists">
+  <option value="">ORDENAR POR</option>
   <option value="aToZ">A-Z</option>
   <option value="zToA">Z-A</option>
-
+</select>
   <!--busqueda input-->
 
   <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"></input>
+</section>
 
+  <section id="welcome">
+    <div>
+    <h1>PoKeDaTa GO </h1>
+    <p>Es una web dirigida a todos los jugadores amantes de Pokémon GO.</p>
+    <p>En nuestra página podrás encontrar tus pokémon por tipo y debilidades, así como conocer las características de tu pokémon favorito o el de tu contrincante.</p>
+    <h2>¡Explora y conviertete en el mejor Entrenador Pokémon!</h2>
+  </div>
+    
+  <div class = "pokeFriends">
+    <img src="imagenes/pokemon-bienvenida.jpg" id = "welcomeImage" >
+  </div>
 
+  </section>
 
-
-
-
-
-</select>
-
-
-
-
-
-
-
-
-
-
-
-    <script src="main.js" type="module"></script>
+  <div id="root"></div>
+  
+  <script src="main.js" type="module"></script>
   </body>
 </html>
