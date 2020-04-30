@@ -63,7 +63,7 @@ body {
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     
     #logo {
         width:100%;
@@ -116,6 +116,16 @@ body {
     }
   
     
+}
+
+@media screen and (max-width: 425px) {
+    #logo {
+        width: 100px;
+    }
+
+
+
+
 }
 
 #welcomePage {
