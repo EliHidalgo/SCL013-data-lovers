@@ -36,6 +36,14 @@ body {
     font-weight: bold;
     font-size: 15px;
     margin-left: 20px;
+    display: flex;
+}
+
+.droplists:hover {
+    color: #FFC800; /* #004B8C;*/
+    font-size: 20px;
+    box-shadow: #FFFFFF;
+    display: flex;
 }
 
 #searchBar {
@@ -55,6 +63,61 @@ body {
     color: #FFFFFF;
 }
 
+@media screen and (max-width: 700px) {
+    
+    #logo {
+        width:100%;
+
+    }
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 70px;
+    }
+    #searchInput {
+        display: none;
+    }
+    .droplists {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .droplists:hover{
+        font-size: 15px;
+    }
+    #welcomePage {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 120%;
+    }
+    p {
+        font-size: 70%;
+    }
+    h3 {
+        font-size: 90%;
+    }
+    #welcomeImage {
+        height: 70%;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .copyright {
+        display:none;
+    }
+    .socialMedia {
+        display:flex;
+        align-self: center;
+    }
+    #footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+  
+    
+}
+
 #welcomePage {
     display: flex;
     margin-top: 100px;
@@ -65,8 +128,9 @@ body {
     display: flex;
     justify-content: flex-start;
     text-align: left;
+    font-size: 130%;
     font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.4);
     padding-right: 5%;
     padding-left: 5%;
     padding-bottom: 10%;
@@ -81,7 +145,7 @@ body {
     padding-bottom: 10%;   
 }
 
-h1 {
+/*h1 {
     font-size: 40px;
     font-style: normal;
     font-weight: bolder;
@@ -89,7 +153,9 @@ h1 {
 
 p {
     font-size: 18px;
-}
+}*/
+
+
 
 #footer{
     background-color: #FB272A;
