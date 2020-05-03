@@ -73,7 +73,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 70px;
+        height: 100%;
     }
     #searchInput {
         display: none;
@@ -81,12 +81,16 @@ body {
     .droplists {
         font-size: 12px;
         margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .droplists:hover{
         font-size: 15px;
+        box-shadow: transparent;
     }
     #welcomePage {
         flex-direction: column;
+        margin-top: 0%;
     }
     h1 {
         font-size: 120%;
@@ -102,6 +106,7 @@ body {
         width: 70%;
         margin-right: auto;
         margin-left: auto;
+        padding-left: 5%;
     }
     .copyright {
         display:none;
@@ -130,7 +135,7 @@ body {
 
 #welcomePage {
     display: flex;
-    margin-top: 100px;
+    margin-top: 5%;
     justify-items: center;    
 }
 
@@ -196,4 +201,59 @@ p {
     text-decoration: none;
     font-size: 1.5rem;
     margin-right: 20px; 
+}
+
+#topMessageOfType {
+    text-align: center;
+    font-size: 80%;
+    font-family: sans-serif;
+    font-style: normal;
+    background-color: blueviolet;
+    margin-bottom: 2%;
+}
+#root {
+    text-align: left;
+    background-color: blue;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2%;
+}
+
+.smallCardStyle {
+    background-color: tomato;    /* rgba(255, 255, 255, 0.9);*/
+    border-radius: 5%;
+    border: 3px solid rgba(185, 211, 210, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0,0.80);
+    width: 10%;
+    height: 5%;
+    margin: 1.5%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    color:rgba(0, 0, 0, 0.5);
+              
+}
+#pokemonNameCard {
+    background-color: darkgray;
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+#imgPokemonCard {
+    background-color: burlywood;
+    border-color: darkcyan;
+    border-style: double;
+    display: flex;
+    align-self: center;
+}
+.seeMorePopUp {
+    color: #FB272A;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-end;
+    
 }
