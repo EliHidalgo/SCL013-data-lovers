@@ -32,7 +32,7 @@ selecFilterByTypePokemon.addEventListener('change', () => {
     const stringOfNameOfPokemon = nameOfPokemon("type", droplistSelectType);
     const stringOfNumOfPokemon = numOfPokemon("type", droplistSelectType);
     const stringOfTypeOfPokemon = typeOfPokemon("type", droplistSelectType);
-    const stringHeightOfPokemon = heightOfPokemon("type", droplistSelectType);
+    //const stringHeightOfPokemon = heightOfPokemon("type", droplistSelectType);
     const stringOfNextEvolutionOfPokemon = nextEvolutionOfPokemon("type", droplistSelectType);
     
     //variable que llama la sección (root) que contendra todas las cards de los pokémon

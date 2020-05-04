@@ -22,9 +22,9 @@ export const anotherExample = () => {
   //console.log(names);
 }*/
 
-import pokemonData from './../data/pokemon/pokemon.js';
+import pokemon from './data/pokemon/pokemon.js';
 
-const pokemonDatos = pokemonData.pokemon;
+const pokemonDatos = pokemon.pokemon;
 console.log(pokemonDatos);
 
 const imgOfPokemon = (newFilter, condition) => {
