@@ -55,7 +55,7 @@ const candyOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy);
 }
 
-const candy_countOfPokemon = (newFilter, condition) => {
+const candyCountOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy_count).map((x) => x !== undefined ? x : "No posee siguiente evolución");
 }
 
@@ -63,10 +63,10 @@ const weaknessesOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.weaknesses);
 }
 
-const next_evolution = (newFilter, condition) => {
-  return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.next_evolution.name).map((x) => x !== undefined ? x : "No tiene mas evoluciones");
-}
+const nextEvolutionOfPokemon = (newFilter, condition) => {
+  return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.next_evolution);
+}  
 
 
-export { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon, candyOfPokemon, candy_countOfPokemon,
-        weaknessesOfPokemon, next_evolution };
+export { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon, candyOfPokemon, candyCountOfPokemon,
+        weaknessesOfPokemon, nextEvolutionOfPokemon };

@@ -1,6 +1,6 @@
 //import pokemonData from './../data/pokemon/pokemon.js';
 import { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon,
-        candyOfPokemon, candy_countOfPokemon, weaknessesOfPokemon, next_evolution } from './data.js';
+        candyOfPokemon, candyCountOfPokemon, weaknessesOfPokemon, nextEvolutionOfPokemon } from './data.js';
 
 // constante para traer los valores de la propiedad (key) pokemon del objeto pokemonData
 //const pokemonDatos = pokemonData.pokemon;
@@ -32,6 +32,8 @@ selecFilterByTypePokemon.addEventListener('change', () => {
     const stringOfNameOfPokemon = nameOfPokemon("type", droplistSelectType);
     const stringOfNumOfPokemon = numOfPokemon("type", droplistSelectType);
     const stringOfTypeOfPokemon = typeOfPokemon("type", droplistSelectType);
+    const stringHeightOfPokemon = heightOfPokemon("type", droplistSelectType);
+    const stringOfNextEvolutionOfPokemon = nextEvolutionOfPokemon("type", droplistSelectType);
     
     //variable que llama la sección (root) que contendra todas las cards de los pokémon
     const cardsContainer = document.getElementById("root");
@@ -59,6 +61,7 @@ selecFilterByTypePokemon.addEventListener('change', () => {
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                 <h4 id="pokemonNameCard">${stringOfNameOfPokemon[i]} # ${stringOfNumOfPokemon[i]}</h4>
                                 <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : 'No tiene más evoluciones'}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></p>`;
         cardsContainer.appendChild(smallCard);
         /*containerForSmallCards.appendChild(smallCard);*/
