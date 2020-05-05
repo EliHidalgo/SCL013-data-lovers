@@ -52,6 +52,7 @@ Usuario puede filtrar la lista por tipo de Pokémon y ver sus características.
 
 **Diagrama de Flujo**
 
+![Diagrama de flujo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Digrama_Flujo.png?raw=true)
 
 
 **Prototipo Papel
