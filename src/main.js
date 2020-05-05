@@ -65,21 +65,46 @@ selecFilterByTypePokemon.addEventListener('change', () => {
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                 <h4 id="pokemonNameCard">${stringOfNameOfPokemon[i]} # ${stringOfNumOfPokemon[i]}</h4>
                                 <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
-                                <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : 'No tiene más evoluciones'}</p>
-                                <p><span class="seeMorePopUp">Ver...</span></p>`;
+                                <p><span class="seeMorePopUp">Ver...</span></>`;
         cardsContainer.appendChild(smallCard);
         /*containerForSmallCards.appendChild(smallCard);*/
         welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la seccion de root (cards container)
 
         //creacion del div que contendra el modal
+        const modalCard = document.createElement("div");
+        modalCard.setAttribute("class", "modalCardStyle");
+        cardsContainer.appendChild(modalCard);
 
-    
-    
-    
-    
-    
+        //creacion del div que es el modal con la información
+        const modalCardInformation = document.createElement("div");
+        modalCardInformation.setAttribute("class", "modal-card-information");
+        modalCard.appendChild(modalCardInformation);
+        modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
+                                          <h2>${stringOfNameOfPokemon[i]} # ${stringOfNumOfPokemon[i]}</h2>
+                                          <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Caramelo: </span>${stringOfCandyOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${stringOfCandyCountOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Debilidades: </span>${stringOfWeaknessesOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : "No tiene más evoluciones"}</p>    `;
+        
+                                            
+        //creacion del boton de cerrar el modal card de information de pokemon
+        const closeModal = document.createElement("span");
+        closeModal.setAttribute("id", "closeModalSpan");
+        closeModal.innerHTML = "&times;";
+        modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
+
+        //evento par abrir el modal
+        /*smallCard.addEventListener("click", () => {
+            modalCard.
+        })*/
+        smallCard.addEventListener("click", () => {
+            modalCard.classList.add("modal-bg-active");
+        });
+        closeModal.addEventListener("click", () => {
+            modalCard.classList.remove("modal-bg-active");
+        });
     }
-
-
-    
 });

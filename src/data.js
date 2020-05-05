@@ -56,7 +56,7 @@ const candyOfPokemon = (newFilter, condition) => {
 }
 
 const candyCountOfPokemon = (newFilter, condition) => {
-  return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy_count).map((x) => x !== undefined ? x : "No posee siguiente evolución");
+  return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy_count).map((x) => x !== undefined ? x : "No aplica");
 }
 
 const weaknessesOfPokemon = (newFilter, condition) => {
