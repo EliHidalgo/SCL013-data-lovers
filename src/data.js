@@ -25,7 +25,7 @@ export const anotherExample = () => {
 import pokemon from './data/pokemon/pokemon.js';
 
 const pokemonDatos = pokemon.pokemon;
-console.log(pokemonDatos);
+//console.log(pokemonDatos);
 
 const imgOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.img);
