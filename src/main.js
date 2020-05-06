@@ -63,7 +63,7 @@ selecFilterByTypePokemon.addEventListener('change', () => {
         smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
         smallCard.setAttribute("id", "divSmallCardPokemon");
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
-                                <h4 id="pokemonNameCard">${stringOfNameOfPokemon[i]} # ${stringOfNumOfPokemon[i]}</h4>
+                                <h5 id="pokemonNameCard">${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h5>
                                 <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
         cardsContainer.appendChild(smallCard);
@@ -80,7 +80,7 @@ selecFilterByTypePokemon.addEventListener('change', () => {
         modalCardInformation.setAttribute("class", "modal-card-information");
         modalCard.appendChild(modalCardInformation);
         modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
-                                          <h2>${stringOfNameOfPokemon[i]} # ${stringOfNumOfPokemon[i]}</h2>
+                                          <h2>${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h2>
                                           <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
