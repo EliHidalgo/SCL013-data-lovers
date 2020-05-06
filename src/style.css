@@ -1,6 +1,7 @@
 /*Pokedata GO header*/
 body {
     margin: 0px;
+    font-family: sans-serif;
 }
 
 #logo {
@@ -44,6 +45,7 @@ body {
     font-size: 20px;
     box-shadow: #FFFFFF;
     display: flex;
+    cursor: pointer;
 }
 
 #searchBar {
@@ -61,6 +63,12 @@ body {
     align-items: center;
     margin-right: 20px;
     color: #FFFFFF;
+}
+
+option {
+    background-color: #FF7A64 ;
+    color: whitesmoke;
+    font-family: sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -139,16 +147,6 @@ body {
     }
         
 }
-
-/*@media screen and (max-width: 425px) {
-    #logo {
-        width: 100px;
-    }
-
-
-
-
-}*/
 
 #welcomePage {
     display: flex;
@@ -236,8 +234,8 @@ p {
 }
 /*card de pokemon*/
 .smallCardStyle {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 4%;
+    background-color:rgba(255, 255, 255, 0.9);
+    border-radius: 2%;
     border: 2px solid rgba(185, 211, 210, 0.8); /*rgba(60, 201, 201, 0.65)*/
     box-sizing: border-box;
     box-shadow: 0px 8px 8px rgba(0, 0, 0,0.70);
@@ -304,7 +302,7 @@ p {
 /*div de modal que contiene  la información por pokémon*/
 .modal-card-information {
     background-color: rgba(255, 255, 255);
-    border-radius: 25px;
+    border-radius: 3%;
     border: 3px solid rgba(60, 201, 201, 0.65);
     box-sizing: border-box;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.20);
