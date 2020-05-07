@@ -30,7 +30,7 @@ section label {
     width: 100%;
     font-size: 30px;
     font-weight: bold;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 0px 10px 10px;
 }
 .btn-menu:hover {
     cursor: pointer;
@@ -112,6 +112,10 @@ option {
         transition: all 0.8s;
         margin-bottom: 0;    
     }
+    .btn-menu {
+        max-width: 415.600px;
+    }
+
     #btn-menu-responsive:checked ~ #menu {
         margin: 0;
     }
