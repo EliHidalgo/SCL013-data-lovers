@@ -14,7 +14,30 @@ body {
     left: 0px;
     top: 0px;
 }
-
+/*menu responsive hamburguesa*/
+section label {
+    display: none;
+}
+#btn-menu-responsive {
+    display: none;
+    width: 100%;
+    background-color:#FB272A;
+    display:none;
+}
+.btn-menu {
+    color: #FFFFFF;
+    background-color: #FB272A;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+}
+.btn-menu:hover {
+    cursor: pointer;
+    color: #FFC800;
+    font-size: 35px;
+}
+/*estilo menu desktop*/
 #menu {
     position: center;
     background: #FB272A;  /* #FFC800; #004B8C;*/
@@ -75,30 +98,46 @@ option {
     
     #logo {
         width:100%;
-
+    }
+    section label {
+        display: block;
     }
     #menu {
+        background: #FB272A;
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+        width: 60%;
+        margin-left: -60%;
+        transition: all 0.8s;
+        margin-bottom: 0;    
+    }
+    #btn-menu-responsive:checked ~ #menu {
+        margin: 0;
+    }
+    /*#menu {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100%;
-    }
+    }*/
     #searchInput {
         display: none;
     }
     .droplists {
         font-size: 12px;
         margin-left: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
+        
+        
     }
     .droplists:hover{
-        font-size: 15px;
-        box-shadow: transparent;
+        font-size: 14px;
+        
     }
     #welcomePage {
         flex-direction: column;
-        margin-top: 0%;
+        margin-top: 0;
     }
     h1 {
         font-size: 120%;
