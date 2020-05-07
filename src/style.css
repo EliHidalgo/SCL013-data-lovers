@@ -112,7 +112,7 @@ option {
         background: #FB272A;
         display:flex;
         flex-direction: column;
-        height: 110%;
+        height: 125%;
         width: 60%;
         margin-left: -60%;
         transition: all 0.8s;
