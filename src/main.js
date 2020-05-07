@@ -208,6 +208,12 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
 //ordenar de A a la Z//
 
 document.getElementById("selectOrder").addEventListener('change',() => {
+    //devuelve los otros select de filtro por tipo y ordenar por para que queden en su select inicial
+    document.getElementById("selectType").value = ""; 
+    document.getElementById("selectWeak").value = "";
+    document.getElementById("searchBar").value = ""; // vacia el input dado el caso tenga alguna palabra escrita
+    document.getElementById("topMessageOfType").innerHTML = "";
+
     const orderbyName = document.getElementById("selectOrder").value;
     let pokeOrdered = [];
     pokeOrdered = data.sortData(pokemonDatos,orderbyName);

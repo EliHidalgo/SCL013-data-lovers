@@ -21,21 +21,27 @@ section label {
 #btn-menu-responsive {
     display: none;
     width: 100%;
-    background-color:#FB272A;
+    /*background-color:#FB272A;*/
     display:none;
 }
 .btn-menu {
     color: #FFFFFF;
     background-color: #FB272A;
-    width: 100%;
     font-size: 30px;
     font-weight: bold;
     padding: 10px 0px 10px 10px;
+    margin: 0;
+}
+#menuResponsive {
+    background-color: #FB272A;
+    height: 50px;
+
 }
 .btn-menu:hover {
     cursor: pointer;
     color: #FFC800;
     font-size: 35px;
+    padding-bottom: 1%;
 }
 /*estilo menu desktop*/
 #menu {
@@ -106,16 +112,12 @@ option {
         background: #FB272A;
         display:flex;
         flex-direction: column;
-        height: 100%;
+        height: 110%;
         width: 60%;
         margin-left: -60%;
         transition: all 0.8s;
-        margin-bottom: 0;    
+        /*margin-bottom: 2px;*/    
     }
-    .btn-menu {
-        max-width: 415.600px;
-    }
-
     #btn-menu-responsive:checked ~ #menu {
         margin: 0;
     }
@@ -129,22 +131,20 @@ option {
         display: none;
     }
     .droplists {
-        font-size: 12px;
+        font-size: 10px;
         margin-left: 10px;
-        margin-bottom: 2px;
-        
-        
+        margin-bottom: 5px;
     }
     .droplists:hover{
-        font-size: 14px;
-        
+        font-size: 12px;
+        margin-bottom: 0;
     }
     #welcomePage {
         flex-direction: column;
-        margin-top: 0;
     }
     h1 {
         font-size: 120%;
+        padding-top: 5%;
     }
     p {
         font-size: 70%;
@@ -158,6 +158,7 @@ option {
         margin-right: auto;
         margin-left: auto;
         padding-left: 5%;
+        padding-bottom: 10%;
     }
     .copyright {
         display:none;
@@ -186,7 +187,6 @@ option {
     .modal-card-information {
         min-width: 300px;
         min-height: 450px;
-        
     }
         
 }
@@ -350,14 +350,13 @@ p {
     box-sizing: border-box;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.20);
     width: 30%;
-    /*height: 70%;*/
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
     margin: auto;
-    padding-bottom: 20px; /*2%*/
-    padding-left: 20px; /*1.5%*/
-    padding-right: 20px; /*1.5*/
+    padding-bottom: 20px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
     /*padding-top: 1%;*/
     color: rgba(0, 0, 0, 0.7);
 }
