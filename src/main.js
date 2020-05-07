@@ -1,6 +1,11 @@
+import pokemon from './data/pokemon/pokemon.js';
+import * as data from './data.js';
+
+const pokemonDatos = pokemon.pokemon;
+
 //import pokemonData from './../data/pokemon/pokemon.js';
 import { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon,
-        candyOfPokemon, candyCountOfPokemon, weaknessesOfPokemon, nextEvolutionOfPokemon } from './data.js';
+candyOfPokemon, candyCountOfPokemon, weaknessesOfPokemon, nextEvolutionOfPokemon,sortByName,sortData } from './data.js';
 
 // constante para traer los valores de la propiedad (key) pokemon del objeto pokemonData
 //const pokemonDatos = pokemonData.pokemon;
@@ -136,14 +141,12 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
     const stringOfWeaknessesOfPokemon = weaknessesOfPokemon("weaknesses", droplistSelectWeakness);
     const stringOfNextEvolutionOfPokemon = nextEvolutionOfPokemon("weaknesses", droplistSelectWeakness);
 
-
     //variable que llama la sección (root) que contendra todas las cards de los pokémon
     const cardsContainer = document.getElementById("root");
     //ciclo para borrar todos los hijos que pueda tener la seccion de root (cardsContainer) para poder imprimir los pokémon por filtro solicitado
     while (cardsContainer.hasChildNodes()) {
         cardsContainer.removeChild(cardsContainer.firstChild);
     }
-    
     
     //mensaje que indica contra que debilidad estas viendo en pantalla 
     let showingWeaknessOfPokemon = document.getElementById("topMessageOfType");
@@ -201,3 +204,68 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
         });
     }
 });
+
+//ordenar de A a la Z//
+
+document.getElementById("selectOrder").addEventListener('change',() => {
+    const orderbyName = document.getElementById("selectOrder").value;
+    let pokeOrdered = [];
+    pokeOrdered = data.sortData(pokemonDatos,orderbyName);
+
+    const cardsContainer = document.getElementById("root");
+    while (cardsContainer.hasChildNodes()) {
+        cardsContainer.removeChild(cardsContainer.firstChild);
+    }
+
+    for(let i = 0; i < pokeOrdered.length; i++){
+        const smallCard = document.createElement("div"); //variable para crear div para las cards de pokémon
+        /*const containerForSmallCards = document.createElement("div"); //variasble que contenga el div de smallCard
+        containerForSmallCards.setAttribute("id", "container-for-small-cards");*/
+        smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
+        smallCard.setAttribute("id", "divSmallCardPokemon");
+        smallCard.innerHTML += `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
+                                <h5 id="pokemonNameCard">${pokeOrdered[i].name} #${pokeOrdered[i].num}</h5>
+                                <p><span class="modalPokemon">Tipo: </span>${pokeOrdered[i].type}</p>
+                                <p><span class="seeMorePopUp">Ver...</span></>`;
+        cardsContainer.appendChild(smallCard);
+        /*containerForSmallCards.appendChild(smallCard);*/
+        welcomeContainer.innerHTML = " ";  
+        
+        //creacion del div que contendra el modal
+        const modalCard = document.createElement("div");
+        modalCard.setAttribute("class", "modalCardStyle");
+        cardsContainer.appendChild(modalCard);
+
+        //creacion del div que es el modal con la información
+        const modalCardInformation = document.createElement("div");
+        modalCardInformation.setAttribute("class", "modal-card-information");
+        modalCard.appendChild(modalCardInformation);
+        modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
+                                          <h2>${pokeOrdered[i].name} #${pokeOrdered[i].num}</h2>
+                                          <p><span class="modalPokemon">Tipo: </span>${pokeOrdered[i].type}</p>
+                                          <p><span class="modalPokemon">Altura: </span>${pokeOrdered[i].height}</p>
+                                          <p><span class="modalPokemon">Peso: </span>${pokeOrdered[i].weight}</p>
+                                          <p><span class="modalPokemon">Caramelo: </span>${pokeOrdered[i].candy}</p>
+                                          <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${pokeOrdered[i].candy_count}</p>
+                                          <p><span class="modalPokemon">Debilidades: </span>${pokeOrdered[i].weaknesses}</p>
+                                          <p><span class="modalPokemon">Evolución: </span>${pokeOrdered[i].next_evolution ? pokeOrdered[i].next_evolution[0].name : "No tiene más evoluciones"}</p>    `;
+
+        //creacion del boton de cerrar el modal card de information de pokemon
+        const closeModal = document.createElement("span");
+        closeModal.setAttribute("id", "closeModalSpan");
+        closeModal.innerHTML = "&times;";
+        modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
+
+        //evento par abrir el modal
+        /*smallCard.addEventListener("click", () => {
+            modalCard.
+        })*/
+        smallCard.addEventListener("click", () => {
+            modalCard.classList.add("modal-bg-active");
+        });
+        closeModal.addEventListener("click", () => {
+            modalCard.classList.remove("modal-bg-active");
+        });
+    }
+    }
+);

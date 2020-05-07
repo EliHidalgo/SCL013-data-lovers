@@ -67,6 +67,27 @@ const nextEvolutionOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.next_evolution);
 }  
 
+function sortByName(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 1;
+}
 
+const sortData = (data, condition) => {
+  let sorted = [];
+
+  if (condition === 'aToZ') {
+    sorted = data.sort(sortByName);
+  }
+  if (condition === 'zToA') {
+    sorted = data.sort(sortByName).reverse();
+  }
+  return sorted;
+};
+
+
+  
+ 
 export { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon, candyOfPokemon, candyCountOfPokemon,
-        weaknessesOfPokemon, nextEvolutionOfPokemon };
+        weaknessesOfPokemon, nextEvolutionOfPokemon,sortByName,sortData };
