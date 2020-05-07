@@ -112,7 +112,7 @@ option {
         background: #FB272A;
         display:flex;
         flex-direction: column;
-        height: 125%;
+        height: 130%;
         width: 60%;
         margin-left: -60%;
         transition: all 0.8s;
@@ -144,7 +144,7 @@ option {
     }
     h1 {
         font-size: 120%;
-        padding-top: 5%;
+        padding-top: 7%;
     }
     p {
         font-size: 70%;
