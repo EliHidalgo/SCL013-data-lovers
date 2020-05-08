@@ -6,75 +6,59 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };*/
-/*export const filterData = (pokemonDatos, condition) => {
-  //console.log(pokemonDatos);
-  //console.log(condition);
-  let types = [];
-  for(let i = 0; i < pokemonDatos.length; i++) {
-    types.push(pokemonDatos[i].type)
-  }
-  let type = pokemonDatos.filter((pokemonDatos) => pokemonDatos.type === condition);
-  return type;
-  //for (let i=0 ; i< pokemonDatos.length; i++){
-   // names.push(pokemonDatos[i].name)
- // }
-  //return names;
-  //console.log(names);
-}*/
 
 import pokemon from './data/pokemon/pokemon.js';
 
 const pokemonDatos = pokemon.pokemon;
-//console.log(pokemonDatos);
 
-const imgOfPokemon = (newFilter, condition) => {
+export const imgOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.img);
 }
 
-const nameOfPokemon = (newFilter, condition) => {
+export const nameOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.name);
 }
 
-const numOfPokemon = (newFilter, condition) => {
+export const numOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.num);
 }
 
-const typeOfPokemon = (newFilter, condition) => {
+export const typeOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.type);
 }
 
-const heightOfPokemon = (newFilter, condition) => {
+export const heightOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.height);
 }
 
-const weightOfPokemon = (newFilter, condition) => {
+export const weightOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.weight);
 }
 
-const candyOfPokemon = (newFilter, condition) => {
+export const candyOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy);
 }
 
-const candyCountOfPokemon = (newFilter, condition) => {
+export const candyCountOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.candy_count).map((x) => x !== undefined ? x : "No aplica");
 }
 
-const weaknessesOfPokemon = (newFilter, condition) => {
+export const weaknessesOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.weaknesses);
 }
 
-const nextEvolutionOfPokemon = (newFilter, condition) => {
+export const nextEvolutionOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.next_evolution);
-}  
+}
 
-function sortByName(a, b) {
+export function sortByName(a, b) {
   if (a.name < b.name) {
     return -1;
   }
   return 1;
 }
 
-const sortData = (data, condition) => {
+export const sortData = (data, condition) => {
   let sorted = [];
 
   if (condition === 'aToZ') {
@@ -86,8 +70,3 @@ const sortData = (data, condition) => {
   return sorted;
 };
 
-
-  
- 
-export { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon, candyOfPokemon, candyCountOfPokemon,
-        weaknessesOfPokemon, nextEvolutionOfPokemon,sortByName,sortData };

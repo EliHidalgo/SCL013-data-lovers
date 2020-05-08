@@ -1,116 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimun-scale=1.0" name="viewport"/>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="https://kit.fontawesome.com/3b4f19e26f.js" crossorigin="anonymous"></script>
-  </head>
 
-  <body>
-   
-   
-<!-- Header y logo -->
-<section id ="header">
-<a href="index.html" title="Home" class="pokeDataImage">
-  <img src="imagenes/header.png" alt="header Pokedata" id="logo">
-</a>
-</section>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimun-scale=1.0"
+    name="viewport" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/3b4f19e26f.js" crossorigin="anonymous"></script>
+</head>
 
-<!--<div id="menuResponsive"> </div>-->
-<section id="menuResponsive">
-<input type="checkbox" id="btn-menu-responsive">
-<label for="btn-menu-responsive" ><i class="btn-menu fas fa-bars"></i></label>
+<body>
 
-<!--contenedor de botones de filtrado-->
-<section id= "menu">
-<select id="selectType"  class="droplists">
-  <option value="" disabled selected>TIPO DE POKÉMON</option>
-  <option value="Water">Agua</option>
-  <option value="Fire">Fuego</option>
-  <option value="Normal">Normal</option>
-  <option value="Grass">Planta</option>
-  <option value="Electric">Eléctrico</option>
-  <option value="Ice">Hielo</option>
-  <option value="Fighting">Pelea</option>
-  <option value="Poison">Veneno</option>
-  <option value="Ground">Tierra</option>
-  <option value="Flying">Volador</option>
-  <option value="Psychic">Psíquicos</option>
-  <option value="Bug">Bicho</option>
-  <option value="Rock">Roca</option>
-  <option value="Ghost">Fantasma</option>
-  <option value="Dragon">Dragón</option>
-</select>
 
-<select id="selectWeak" class="droplists">
-  <option value="" disabled selected>DEBILIDAD CONTRA</option>
-  <option value="Water">Agua</option>
-  <option value="Fire">Fuego</option>
-  <option value="Grass">Planta</option>
-  <option value="Electric">Eléctrico</option>
-  <option value="Ice">Hielo</option>
-  <option value="Fighting">Pelea</option>
-  <option value="Poison">Veneno</option>
-  <option value="Ground">Tierra</option>
-  <option value="Flying">Volador</option>
-  <option value="Psychic">Psíquicos</option>
-  <option value="Bug">Bicho</option>
-  <option value="Rock">Roca</option>
-  <option value="Ghost">Fantasma</option>
-  <option value="Dragon">Dragón</option>
-  <option value="Dark">Siniéstro</option>
-  <option value="Steel">Metal</option>
-  <option value="Fairy">Hada</option>
-</select>
+  <!-- Header y logo -->
+  <section id="header">
+    <a href="index.html" title="Home" class="pokeDataImage">
+      <img src="imagenes/header.png" alt="header Pokedata" id="logo">
+    </a>
+  </section>
 
-<select id="selectOrder" class="droplists">
-  <option value="" disabled selected>ORDENAR POR</option>
-  <option value="aToZ">A-Z</option>
-  <option value="zToA">Z-A</option>
-</select>
-  <!--busqueda input-->
+  <!-- Sección para menu responsive-->
+  <section id="menuResponsive">
+    <input type="checkbox" id="btn-menu-responsive">
+    <label for="btn-menu-responsive"><i class="btn-menu fas fa-bars"></i></label>
 
-  <div id = "searchInput">
-  <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"><i class="search fas fa-search"></i>
-</div>
-</section>
-</section>
+    <!--contenedor de botones de filtrado-->
+    <section id="menu">
+      <select id="selectType" class="droplists">
+        <option value="" disabled selected>TIPO DE POKÉMON</option>
+        <option value="Water">Agua</option>
+        <option value="Fire">Fuego</option>
+        <option value="Normal">Normal</option>
+        <option value="Grass">Planta</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Ice">Hielo</option>
+        <option value="Fighting">Pelea</option>
+        <option value="Poison">Veneno</option>
+        <option value="Ground">Tierra</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquicos</option>
+        <option value="Bug">Bicho</option>
+        <option value="Rock">Roca</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Dragon">Dragón</option>
+      </select>
+
+      <select id="selectWeak" class="droplists">
+        <option value="" disabled selected>DEBILIDAD CONTRA</option>
+        <option value="Water">Agua</option>
+        <option value="Fire">Fuego</option>
+        <option value="Grass">Planta</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Ice">Hielo</option>
+        <option value="Fighting">Pelea</option>
+        <option value="Poison">Veneno</option>
+        <option value="Ground">Tierra</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquicos</option>
+        <option value="Bug">Bicho</option>
+        <option value="Rock">Roca</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Dragon">Dragón</option>
+        <option value="Dark">Siniéstro</option>
+        <option value="Steel">Metal</option>
+        <option value="Fairy">Hada</option>
+      </select>
+
+      <select id="selectOrder" class="droplists">
+        <option value="" disabled selected>ORDENAR POR</option>
+        <option value="aToZ">A-Z</option>
+        <option value="zToA">Z-A</option>
+      </select>
+      
+      <!--busqueda input-->
+      <div id="searchInput">
+        <input type="text" id="searchBar" placeholder=" Buscar ej.: vulpix"><i class="search fas fa-search"></i>
+      </div>
+    </section>
+  </section>
 
   <section id="welcomePage">
-  <div id = "welcome" class = "welcomeText">
-    <h1>PoKéDaTa GO </h1>
-    <p>Es una web dirigida a todos los jugadores amantes de Pokémon GO.</p>
-    <p>En nuestra página podrás encontrar tus pokémon por tipo y debilidades, así como conocer las características de tu pokémon favorito o el de tu contrincante.</p>
-    <h3>¡Explora y conviertete en el mejor Entrenador Pokémon!</h3>
-  </div>
-    
-  <div class = "pokeFriends">
-    <img src="imagenes/pokeFriends-inicio.jpg" id = "welcomeImage" >
-  </div>
-
-  </section>
-<!--contenedor para mostrar mensaje de tipo de pokemon  en vista-->
-  <section id = "topMessageOfType"></section>
-  <!--contenedor para mostrar HTML dinamico-->
-  <section id="root"></section>
-  
-  <footer id = "footer">
-    <div class = "copyright">
-      <p class = "footerCopyright">PoKeDaTa GO 2020. Derechos Reservados. Desarrollo e implementación por Eliana Hidalgo y Paula Plaza</p>
+    <div id="welcome" class="welcomeText">
+      <h1>PoKéData GO </h1>
+      <p>Es una web dirigida a todos los jugadores amantes de Pokémon GO.</p>
+      <p>En nuestra página podrás encontrar tus pokémon por tipo y debilidades, así como conocer las características de
+        tu pokémon favorito o el de tu contrincante.</p>
+      <h3>¡Explora y conviertete en el mejor Entrenador Pokémon!</h3>
     </div>
 
-    <div class = "socialMedia">
-      <a href="https://www.youtube.com/user/pokemon" target = "_blank"><i class="icon fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/pokemon/"  target = "_blank"><i class="icon fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/Pokemon/"  target = "_blank"><i class="icon fab fa-facebook-square"></i></a>
-      <a href="https://twitter.com/pokemon"  target = "_blank"><i class="icon fab fa-twitter"></i></a>
+    <div class="pokeFriends">
+      <img src="imagenes/pokeFriends-inicio.jpg" id="welcomeImage">
+    </div>
+
+  </section>
+  <!--contenedor para mostrar mensaje de tipo de pokemon  en vista-->
+  <section id="topMessageOfType"></section>
+  <!--contenedor para mostrar HTML dinamico con las cardas de pokémon-->
+  <section id="root"></section>
+
+  <footer id="footer">
+    <div class="copyright">
+      <p class="footerCopyright">PoKéDaTa GO 2020. Derechos Reservados. Desarrollo e implementación por Eliana Hidalgo y
+        Paula Plaza</p>
+    </div>
+
+    <div class="socialMedia">
+      <a href="https://www.youtube.com/user/pokemon" target="_blank"><i class="icon fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/pokemon/" target="_blank"><i class="icon fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/Pokemon/" target="_blank"><i class="icon fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/pokemon" target="_blank"><i class="icon fab fa-twitter"></i></a>
     </div>
   </footer>
 
   <script src="main.js" type="module"></script>
-  
+
 </body>
 
 </html>

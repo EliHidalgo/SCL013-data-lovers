@@ -1,394 +1,422 @@
 /*Pokedata GO header*/
 body {
-    margin: 0px;
-    font-family: sans-serif;
+  margin: 0px;
+  font-family: sans-serif;
 }
 
 #logo {
-    background-attachment: scroll, fixed;
-    background-position-x: left, center;
-    background-position-y: top, center;
-    background-size: auto, cover;
-    width: 100%;
-    height: auto;
-    left: 0px;
-    top: 0px;
+  background-attachment: scroll, fixed;
+  background-position-x: left, center;
+  background-position-y: top, center;
+  background-size: auto, cover;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  top: 0px;
 }
-/*menu responsive hamburguesa*/
+
+/*menú responsive hamburguesa*/
 section label {
-    display: none;
+  display: none;
 }
+
 #btn-menu-responsive {
-    display: none;
-    width: 100%;
-    /*background-color:#FB272A;*/
-    display:none;
+  display: none;
+  width: 100%;
+  display: none;
 }
+
 .btn-menu {
-    color: #FFFFFF;
-    background-color: #FB272A;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 10px 0px 10px 10px;
-    margin: 0;
+  color: #FFFFFF;
+  background-color: #FB272A;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0px 10px 10px;
+  margin: 0;
 }
+
 #menuResponsive {
-    background-color: #FB272A;
-    height: 50px;
-
+  background-color: #FB272A;
+  height: 50px;
 }
+
 .btn-menu:hover {
-    cursor: pointer;
-    color: #FFC800;
-    font-size: 35px;
-    padding-bottom: 1%;
-}
-/*estilo menu desktop*/
-#menu {
-    position: center;
-    background: #FB272A;  /* #FFC800; #004B8C;*/
-    width: 100%;
-    height: 55px;
-    left: 0px;
-    top: 555px;
-    line-height: 30px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #FB272A;        /* #FFC800; #004B8C;*/
+  cursor: pointer;
+  color: #FFC800;
+  font-size: 35px;
+  padding-bottom: 1%;
 }
 
-.droplists{
-    background-color: #FB272A;
-    border-color: transparent;
-    color: #FFFFFF;
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    margin-left: 20px;
-    display: flex;
+/*estilo menú desktop*/
+#menu {
+  position: center;
+  background: #FB272A;
+  width: 100%;
+  height: 55px;
+  left: 0px;
+  top: 555px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FB272A;
+}
+
+.droplists {
+  background-color: #FB272A;
+  border-color: transparent;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 20px;
+  display: flex;
 }
 
 .droplists:hover {
-    color: #FFC800; /* #004B8C;*/
-    font-size: 20px;
-    box-shadow: #FFFFFF;
-    display: flex;
-    cursor: pointer;
+  color: #FFC800;
+  font-size: 20px;
+  box-shadow: #FFFFFF;
+  display: flex;
+  cursor: pointer;
 }
 
 #searchBar {
-    width: 310px;
-    height: 30px;
-    display: flex;
-    align-self: center;
-    border-radius: 5px;
-    background: #FFFFFF; 
-    margin-right: 10px;
+  width: 310px;
+  height: 30px;
+  display: flex;
+  align-self: center;
+  border-radius: 5px;
+  background: #FFFFFF;
+  margin-right: 10px;
 }
 
 #searchInput {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #FFFFFF;
 }
 
 option {
-    background-color: #FF7A64 ;
-    color: whitesmoke;
-    font-family: sans-serif;
+  background-color: #FF7A64;
+  color: whitesmoke;
+  font-family: sans-serif;
 }
 
 @media screen and (max-width: 768px) {
-    
-    #logo {
-        width:100%;
-    }
-    section label {
-        display: block;
-    }
-    #menu {
-        background: #FB272A;
-        display:flex;
-        flex-direction: column;
-        height: 150%;
-        width: 60%;
-        margin-left: -60%;
-        transition: all 0.8s;
-        padding-bottom: 8px;
-        /*margin-bottom: 2px;*/    
-    }
-    #btn-menu-responsive:checked ~ #menu {
-        margin: 0;
-    }
-    /*#menu {
+
+  #logo {
+    width: 100%;
+  }
+
+  section label {
+    display: block;
+  }
+
+  #menu {
+    background: #FB272A;
+    display: flex;
+    flex-direction: column;
+    height: 150%;
+    width: 60%;
+    margin-left: -60%;
+    transition: all 0.8s;
+    padding-bottom: 8px;
+  }
+
+  #btn-menu-responsive:checked~#menu {
+    margin: 0;
+  }
+
+  /*#menu {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100%;
     }*/
-    #searchInput {
-        display: none;
-    }
-    .droplists {
-        font-size: 10px;
-        margin-left: 10px;
-        margin-bottom: 5px;
-    }
-    .droplists:hover{
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-    #welcomePage {
-        flex-direction: column;
-    }
-    h1 {
-        font-size: 120%;
-        padding-top: 10%;
-    }
-    p {
-        font-size: 70%;
-    }
-    h3 {
-        font-size: 90%;
-    }
-    #welcomeImage {
-        height: 70%;
-        width: 70%;
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 5%;
-        padding-bottom: 10%;
-    }
-    .copyright {
-        display:none;
-    }
-    .socialMedia {
-        display:flex;
-        align-self: center;
-    }
-    #footer {
-        display: flex;
-        justify-content: flex-end;
-    }
-    #topMessageOfType {
-        font-size: 2px;
-        margin-top: 63px;
-    }
-    #root {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
-    .smallCardStyle {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 4%;
-        min-width: 150px;
-    }
-    .modal-card-information {
-        min-width: 300px;
-        min-height: 450px;
-    }
-        
+  #searchInput {
+    display: none;
+  }
+
+  .droplists {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .droplists:hover {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  #welcomePage {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 120%;
+    padding-top: 10%;
+  }
+
+  p {
+    font-size: 70%;
+  }
+
+  h3 {
+    font-size: 90%;
+  }
+
+  #welcomeImage {
+    height: 70%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5%;
+    padding-bottom: 10%;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .socialMedia {
+    display: flex;
+    align-self: center;
+  }
+
+  #footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #topMessageOfType {
+    font-size: 2px;
+    margin-top: 63px;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .smallCardStyle {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4%;
+    min-width: 150px;
+  }
+
+  .modal-card-information {
+    min-width: 300px;
+    min-height: 450px;
+  }
 }
 
 #welcomePage {
-    display: flex;
-    margin-top: 5%;
-    justify-items: center;    
+  display: flex;
+  margin-top: 5%;
+  justify-items: center;
 }
+
 /*estilo texto bienvenida*/
 #welcome {
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 140%;
-    font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.4);
-    padding-right: 5%;
-    padding-left: 5%;
-    flex-direction:column;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 140%;
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.4);
+  padding-right: 5%;
+  padding-left: 5%;
+  flex-direction: column;
 }
+
 /*estilo imagen bienvenida*/
 .pokeFriends {
-    display: flex;
-    justify-content: flex-end;
-    align-self: center;
-    padding-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  padding-right: 5%;
 }
 
-/*h1 {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: bolder;
-}
-
-p {
-    font-size: 18px;
-}*/
-
-#footer{
-    background-color: #FB272A;
-    height: 30px;
-    display: flex;
+#footer {
+  background-color: #FB272A;
+  height: 30px;
+  display: flex;
 }
 
 .footerCopyright {
-    display:flex;
-    font-style: normal;
-    font-weight: normal;
-    font-family: sans-serif;
-    font-size: 12px;
-    color: #FFFFFF;
-    margin-left: 10px;
-    align-self: center;
+  display: flex;
+  font-style: normal;
+  font-weight: normal;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  margin-left: 10px;
+  align-self: center;
 }
 
 .socialMedia {
-    display: flex;
-    margin-left: 50%;
-    justify-content: space-between; 
-    align-items: center;  
+  display: flex;
+  margin-left: 50%;
+  justify-content: space-between;
+  align-items: center;
 }
-/*estilo icnos de la barra social media*/
+
+/*iconos de la barra social media*/
 .icon {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-right: 20px; 
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-right: 20px;
 }
-/*mensaje de tipo de pokemon*/
+
+/*mensaje de tipo de pokémon*/
 #topMessageOfType {
-    text-align: center;
-    font-size: 100%;
-    font-family: sans-serif;
-    font-style: normal;
-    /*background-color: blueviolet;*/
-    margin-bottom: 2%;
-    color:rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 100%;
+  font-family: sans-serif;
+  font-style: normal;
+  /*background-color: blueviolet;*/
+  margin-bottom: 2%;
+  color: rgba(0, 0, 0, 0.4);
 }
-/*contenedor principal de las cards de pokemon*/
+
+/*contenedor principal de las cards de pokémon*/
 #root {
-    text-align: left;
-    /*background-color: blue;*/
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2%;
+  text-align: left;
+  /*background-color: blue;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2%;
 }
-/*card de pokemon*/
+
+/*card de pokémon*/
 .smallCardStyle {
-    background-color:rgba(255, 255, 255, 0.9);
-    border-radius: 2%;
-    border: 2px solid rgba(185, 211, 210, 0.8); /*rgba(60, 201, 201, 0.65)*/
-    box-sizing: border-box;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0,0.70);
-    width: 15%;
-    margin: 2%;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: bold;
-    color:rgba(0, 0, 0, 0.6);   
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2%;
+  border: 2px solid rgba(185, 211, 210, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.70);
+  width: 15%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
 }
+
 .smallCardStyle:hover {
-    cursor: pointer;
-    border: 8px solid rgba(185, 211, 210, 0.8);
+  cursor: pointer;
+  border: 8px solid rgba(185, 211, 210, 0.8);
 }
+
 /*estilo en el párrafo de la card chica*/
 #divSmallCardPokemon p {
-    margin: 5%;
+  margin: 5%;
 }
-/*estilo al nombre del pokemon en la card chica*/
+
+/*estilo al nombre del pokémon en la card chica*/
 #pokemonNameCard {
-    /*background-color: darkgray;*/
-    align-self: center;
-    font-size: 18px;
-    font-weight: bold;
+  /*background-color: darkgray;*/
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 /*estilo imagen pokemon en card chica*/
 #imgPokemonCard {
-    /*background-color: burlywood;
+  /*background-color: burlywood;
     border-color: darkcyan;
     border-style: double;*/
-    display: flex;
-    align-self: center;
+  display: flex;
+  align-self: center;
 }
+
 /*estilo de "Ver" en las cartas*/
 .seeMorePopUp {
-    color: #FB272A;
-    font-weight: bolder;
-    display: flex;
-    justify-content: flex-end;
+  color: #FB272A;
+  font-weight: bolder;
+  display: flex;
+  justify-content: flex-end;
 }
+
 /*div que contiene al modal*/
 .modalCardStyle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.8s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.8s;
 }
-/* nueva clase que activara el modal y su visivilidad*/
+
+/*nueva clase que activara el modal y su visivilidad*/
 .modal-bg-active {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
-/*div de modal que contiene  la información por pokémon*/
+
+/*div de modal que contiene la información por pokémon*/
 .modal-card-information {
-    background-color: rgba(255, 255, 255);
-    border-radius: 3%;
-    border: 3px solid rgba(60, 201, 201, 0.65);
-    box-sizing: border-box;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.20);
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    margin: auto;
-    padding-bottom: 20px; 
-    padding-left: 20px; 
-    padding-right: 20px; 
-    /*padding-top: 1%;*/
-    color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255);
+  border-radius: 3%;
+  border: 3px solid rgba(60, 201, 201, 0.65);
+  box-sizing: border-box;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.20);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  margin: auto;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgba(0, 0, 0, 0.7);
 }
-/*estilo del nombre y numero de pokemon en modal*/
+
+/*estilo del nombre y número de pokémon en modal*/
 .modal-card-information h2 {
-    text-align: center;
-    font-weight: bolder;
+  text-align: center;
+  font-weight: bolder;
 }
-/*estilo de los párrafos de carcaterísticas en modal*/
+
+/*estilo de los párrafos de características en modal*/
 .modal-card-information p {
-    font-size: 18px;
-    font-style: normal;
-    text-align: left;
-    margin: 1.5%;
+  font-size: 18px;
+  font-style: normal;
+  text-align: left;
+  margin: 1.5%;
 }
-/*estilo del titulo de carcaterística en el modal*/
+
+/*estilo del título de característica en el modal*/
 .modalPokemon {
-    font-weight: bolder;
-    color:  rgba(0, 0, 0, 0.7);
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.7);
 }
+
 /*estilo de la X que cierra el modal*/
 #closeModalSpan {
-    font-weight: bold;
-    font-size: 30px;
-    display:flex;
-    align-self: flex-end;
-    color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  align-self: flex-end;
+  color: rgba(0, 0, 0, 0.5);
 }
+
 #closeModalSpan:hover {
-    cursor: pointer;
-    color: black;
-    font-size: 40px;
+  cursor: pointer;
+  color: black;
+  font-size: 40px;
 }
