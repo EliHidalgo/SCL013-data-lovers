@@ -7,22 +7,6 @@ const pokemonDatos = pokemon.pokemon;
 import { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon,
 candyOfPokemon, candyCountOfPokemon, weaknessesOfPokemon, nextEvolutionOfPokemon,sortByName,sortData } from './data.js';
 
-// constante para traer los valores de la propiedad (key) pokemon del objeto pokemonData
-//const pokemonDatos = pokemonData.pokemon;
-// mostrando pokemonDatos que es un arreglo de objetos
-//console.log(pokemonDatos);
-
-
-// mostrando el primer valor del arreglo pokemonDatos (indexOf 0)
-/*console.log(pokemonDatos[0]);
-// mostrando la primera propiedad que conforma el objeto ubicado en el index 0 del arreglo 
-console.log(pokemonDatos[0].name);
-console.log(pokemonDatos[0].id);
-console.log(pokemonDatos[0].type);
-console.log(pokemonDatos[0].candy);
-console.log(pokemonDatos[0].candy_count);
-console.log(pokemonDatos[0].weaknesses);*/
-
 //variable para el id del selectType, selección por tipo
 const selectFilterByTypePokemon = document.getElementById("selectType");
 //variable para el id del container de la pagina principal de bienvenida
@@ -57,15 +41,11 @@ selectFilterByTypePokemon.addEventListener('change', () => {
     
     //mensaje que indica que tipo de pokemon esta viendo en pantalla cuando seleccionas
     let showingTypeOfPokemon = document.getElementById("topMessageOfType");
-    /*showingTypeOfPokemon.classList.add("showingTypeStyle");
-    cardsContainer.appendChild(showingTypeOfPokemon);*/
     showingTypeOfPokemon.innerHTML = `<h2 class="showingType"> Tipo de Pokémon: ${droplistSelectType}</h2>`
     
     //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro de tipo
     for(let i = 0; i < stringOfTypeOfPokemon.length; i++){
         const smallCard = document.createElement("div"); //variable para crear div para las cards de pokémon
-        /*const containerForSmallCards = document.createElement("div"); //variasble que contenga el div de smallCard
-        containerForSmallCards.setAttribute("id", "container-for-small-cards");*/
         smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
         smallCard.setAttribute("id", "divSmallCardPokemon");
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
@@ -73,7 +53,6 @@ selectFilterByTypePokemon.addEventListener('change', () => {
                                 <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
         cardsContainer.appendChild(smallCard);
-        /*containerForSmallCards.appendChild(smallCard);*/
         welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la seccion de root (cards container)
 
         //creacion del div que contendra el modal
@@ -102,10 +81,7 @@ selectFilterByTypePokemon.addEventListener('change', () => {
         closeModal.innerHTML = "&times;";
         modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
 
-        //evento par abrir el modal
-        /*smallCard.addEventListener("click", () => {
-            modalCard.
-        })*/
+        //evento para abrir el modal
         smallCard.addEventListener("click", () => {
             modalCard.classList.add("modal-bg-active");
         });
@@ -155,8 +131,6 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
     //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro por debilidad
     for(let i = 0; i < stringOfNameOfPokemon.length; i++){
         const smallCard = document.createElement("div"); //variable para crear div para las cards de pokémon
-        /*const containerForSmallCards = document.createElement("div"); //variasble que contenga el div de smallCard
-        containerForSmallCards.setAttribute("id", "container-for-small-cards");*/
         smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
         smallCard.setAttribute("id", "divSmallCardPokemon");
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
@@ -164,7 +138,6 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
                                 <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
         cardsContainer.appendChild(smallCard);
-        /*containerForSmallCards.appendChild(smallCard);*/
         welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la seccion de root (cards container)
 
         //creacion del div que contendra el modal
@@ -193,9 +166,6 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
         modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
 
         //evento par abrir el modal
-        /*smallCard.addEventListener("click", () => {
-            modalCard.
-        })*/
         smallCard.addEventListener("click", () => {
             modalCard.classList.add("modal-bg-active");
         });
@@ -225,8 +195,6 @@ document.getElementById("selectOrder").addEventListener('change',() => {
 
     for(let i = 0; i < pokeOrdered.length; i++){
         const smallCard = document.createElement("div"); //variable para crear div para las cards de pokémon
-        /*const containerForSmallCards = document.createElement("div"); //variasble que contenga el div de smallCard
-        containerForSmallCards.setAttribute("id", "container-for-small-cards");*/
         smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
         smallCard.setAttribute("id", "divSmallCardPokemon");
         smallCard.innerHTML += `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
@@ -234,7 +202,6 @@ document.getElementById("selectOrder").addEventListener('change',() => {
                                 <p><span class="modalPokemon">Tipo: </span>${pokeOrdered[i].type}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
         cardsContainer.appendChild(smallCard);
-        /*containerForSmallCards.appendChild(smallCard);*/
         welcomeContainer.innerHTML = " ";  
         
         //creacion del div que contendra el modal
@@ -263,9 +230,6 @@ document.getElementById("selectOrder").addEventListener('change',() => {
         modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
 
         //evento par abrir el modal
-        /*smallCard.addEventListener("click", () => {
-            modalCard.
-        })*/
         smallCard.addEventListener("click", () => {
             modalCard.classList.add("modal-bg-active");
         });
@@ -273,5 +237,85 @@ document.getElementById("selectOrder").addEventListener('change',() => {
             modalCard.classList.remove("modal-bg-active");
         });
     }
+});
+
+//funcion de Search
+document.getElementById('searchBar').addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+// devuelve los otros select para que queden en su valor inicial.
+    document.getElementById("selectType").value = ""; 
+    document.getElementById("selectOrder").value = "";
+    document.getElementById("selectWeak").value = ""; 
+    document.getElementById("topMessageOfType").innerHTML = "";
+
+//constante que toma el valor que el usuario ingresa en el input
+const inputSearchValue = document.getElementById("searchBar").value;
+
+//Colocando la primera letra en mayuscula y el resto en minuscula para buscar dentro de la data
+const inputSearchName = inputSearchValue.charAt(0).toUpperCase() + inputSearchValue.slice(1).toLowerCase();
+
+//creando las variables de string de la información que debe aparecer en las cards de cada pokémon
+const stringOfImgOfPokemon = imgOfPokemon("name", inputSearchName);
+const stringOfNameOfPokemon = nameOfPokemon("name", inputSearchName);
+const stringOfNumOfPokemon = numOfPokemon("name", inputSearchName);
+const stringOfTypeOfPokemon = typeOfPokemon("name", inputSearchName);
+const stringOfHeightOfPokemon = heightOfPokemon("name", inputSearchName);
+const stringOfWeightOfPokemon = weightOfPokemon("name", inputSearchName);
+const stringOfCandyOfPokemon = candyOfPokemon("name", inputSearchName)
+const stringOfCandyCountOfPokemon = candyCountOfPokemon("name", inputSearchName);
+const stringOfWeaknessesOfPokemon = weaknessesOfPokemon("name", inputSearchName);
+const stringOfNextEvolutionOfPokemon = nextEvolutionOfPokemon("name", inputSearchName);
+
+//borra todos los hijos que pueda tener la seccion de root
+const cardsContainer = document.getElementById("root");
+    while (cardsContainer.hasChildNodes()) {
+        cardsContainer.removeChild(cardsContainer.firstChild);
     }
-);
+
+    for(let i = 0; i < stringOfNameOfPokemon.length; i++){
+        const smallCard = document.createElement("div"); //variable para crear div para las cards de pokémon
+        smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
+        smallCard.setAttribute("id", "divSmallCardPokemon");
+        smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
+                                <h5 id="pokemonNameCard">${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h5>
+                                <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                <p><span class="seeMorePopUp">Ver...</span></>`;
+        cardsContainer.appendChild(smallCard);
+        welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la seccion de root (cards container)
+
+ //creacion del div que contendra el modal
+ const modalCard = document.createElement("div");
+ modalCard.setAttribute("class", "modalCardStyle");
+ cardsContainer.appendChild(modalCard);
+
+ //creacion del div que es el modal con la información
+ const modalCardInformation = document.createElement("div");
+ modalCardInformation.setAttribute("class", "modal-card-information");
+ modalCard.appendChild(modalCardInformation);
+ modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
+                                   <h2>${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h2>
+                                   <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Caramelo: </span>${stringOfCandyOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${stringOfCandyCountOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Debilidades: </span>${stringOfWeaknessesOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : "No tiene más evoluciones"}</p>    `;
+ 
+                                     
+ //creacion del boton de cerrar el modal card de information de pokemon
+ const closeModal = document.createElement("span");
+ closeModal.setAttribute("id", "closeModalSpan");
+ closeModal.innerHTML = "&times;";
+ modalCardInformation.insertBefore(closeModal, modalCardInformation.childNodes[0]);
+
+ //evento par abrir el modal
+ smallCard.addEventListener("click", () => {
+     modalCard.classList.add("modal-bg-active");
+ });
+ closeModal.addEventListener("click", () => {
+     modalCard.classList.remove("modal-bg-active");
+ });
+    }
+    }
+});
