@@ -1,5 +1,4 @@
 import pokemon from './data/pokemon/pokemon.js';
-import * as data from './data.js';
 
 import {
   imgOfPokemon,
@@ -12,6 +11,7 @@ import {
   candyCountOfPokemon,
   weaknessesOfPokemon,
   nextEvolutionOfPokemon,
+  sortData
 } from './data.js';
 
 const pokemonDatos = pokemon.pokemon;
@@ -45,7 +45,7 @@ selectFilterByTypePokemon.addEventListener('change', () => {
   //devuelve los otros select de filtro debilidad y ordenar para que queden en su select inicial, vacía el input
   document.getElementById("selectWeak").value = "";
   document.getElementById("selectOrder").value = "";
-  document.getElementById("searchBar").value = ""; 
+  document.getElementById("searchBar").value = "";
 
   //mensaje que indica que tipo de pokémon se está viendo en pantalla
   let showingTypeOfPokemon = document.getElementById("topMessageOfType");
@@ -54,7 +54,7 @@ selectFilterByTypePokemon.addEventListener('change', () => {
   //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro de tipo
   for (let i = 0; i < stringOfTypeOfPokemon.length; i++) {
     //variable para crear div para las cards de pokémon
-    const smallCard = document.createElement("div"); 
+    const smallCard = document.createElement("div");
     smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
@@ -109,7 +109,7 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
   //devuelve los otros select de filtro por tipo y ordenar para que queden en su select inicial, vacía el input
   document.getElementById("selectType").value = "";
   document.getElementById("selectOrder").value = "";
-  document.getElementById("searchBar").value = ""; 
+  document.getElementById("searchBar").value = "";
   document.getElementById("topMessageOfType").innerHTML = "";
 
   //variable que reconoce cual de todos los options fue seleccionado en el droplist y te devulve el valor de ese option
@@ -140,7 +140,7 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
   //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro por debilidad
   for (let i = 0; i < stringOfNameOfPokemon.length; i++) {
     //variable para crear div para las cards de pokémon
-    const smallCard = document.createElement("div"); 
+    const smallCard = document.createElement("div");
     smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
@@ -190,14 +190,13 @@ document.getElementById("selectOrder").addEventListener('change', () => {
   //devuelve los otros select de filtro por tipo y ordenar por para que queden en su select inicial, vacía el input
   document.getElementById("selectType").value = "";
   document.getElementById("selectWeak").value = "";
-  document.getElementById("searchBar").value = ""; 
+  document.getElementById("searchBar").value = "";
   document.getElementById("topMessageOfType").innerHTML = " ";
 
   //variable que toma el valor seleccionado por el usuario
   const orderbyName = document.getElementById("selectOrder").value;
   //inicializando variable para ordenar los pokémon 
-  let pokeOrdered = [];
-  pokeOrdered = data.sortData(pokemonDatos, orderbyName);
+  let pokeOrdered = sortData(pokemonDatos, "name", orderbyName);
 
   //variable que llama la sección (root) que contendra todas las cards de los pokémon
   const cardsContainer = document.getElementById("root");
@@ -208,7 +207,7 @@ document.getElementById("selectOrder").addEventListener('change', () => {
   //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro por orden
   for (let i = 0; i < pokeOrdered.length; i++) {
     //variable para crear div para las cards de pokémon
-    const smallCard = document.createElement("div"); 
+    const smallCard = document.createElement("div");
     smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
@@ -288,7 +287,7 @@ document.getElementById('searchBar').addEventListener('keydown', (evt) => {
 
     for (let i = 0; i < stringOfNameOfPokemon.length; i++) {
       //variable para crear div para las cards de pokémon
-      const smallCard = document.createElement("div"); 
+      const smallCard = document.createElement("div");
       smallCard.classList.add("smallCardStyle"); //agrega atributo de clase
       smallCard.setAttribute("id", "divSmallCardPokemon");
       smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>

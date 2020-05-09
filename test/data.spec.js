@@ -26,8 +26,6 @@ describe('anotherExample', () => {
 import { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokemon, weightOfPokemon, candyOfPokemon, candyCountOfPokemon,
   weaknessesOfPokemon, nextEvolutionOfPokemon, sortData } from '../src/data.js';
 
-//import * as data from './data.js';
-
   describe('imgOfPokemon', () => {
     test("debería ser una funcion", () => {
       expect(typeof imgOfPokemon).toBe('function');
@@ -133,9 +131,182 @@ import { imgOfPokemon, nameOfPokemon, numOfPokemon, typeOfPokemon, heightOfPokem
       expect(typeof sortData).toBe('function');
     });
     
-    //test('sortData con parámetros de atoZ y data debería devolver Abra en la primera posición (0)', () => {
-     // expect(sortData("data","atoZ")[0]).toEqual([{"id": 63,"num": "063","name": "Abra","img": "http://www.serebii.net/pokemongo/pokemon/063.png","type": ["Psychic"],
-     //   "height": "0.89 m","weight": "19.5 kg","candy": "Abra Candy","candy_count": 25,"egg": "5 km","spawn_chance": 0.42,"avg_spawns": 42,"spawn_time": "04:30",
-     //   "multipliers": [1.36,1.95],"weaknesses": ["Bug","Ghost","Dark"],"next_evolution": [{"num": "064","name": "Kadabra"}, {"num": "065","name": "Alakazam"}]}]);
-   // });
+    const untidyPoke = [{
+      "id": 7,
+      "num": "007",
+      "name": "Squirtle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/007.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.51 m",
+      "weight": "9.0 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 0.58,
+      "avg_spawns": 58,
+      "spawn_time": "04:25",
+      "multipliers": [2.1],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [{
+        "num": "008",
+        "name": "Wartortle"
+      }, {
+        "num": "009",
+        "name": "Blastoise"
+      }]
+    }, {
+      "id": 8,
+      "num": "008",
+      "name": "Wartortle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/008.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "22.5 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "07:02",
+      "multipliers": [1.4],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [{
+        "num": "007",
+        "name": "Squirtle"
+      }],
+      "next_evolution": [{
+        "num": "009",
+        "name": "Blastoise"
+      }]
+    }, {
+      "id": 9,
+      "num": "009",
+      "name": "Blastoise",
+      "img": "http://www.serebii.net/pokemongo/pokemon/009.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.60 m",
+      "weight": "85.5 kg",
+      "candy": "Squirtle Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0067,
+      "avg_spawns": 0.67,
+      "spawn_time": "00:06",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [{
+        "num": "007",
+        "name": "Squirtle"
+      }, {
+        "num": "008",
+        "name": "Wartortle"
+      }]
+    }];
+    const tidyPoke = [{
+      "id": 9,
+      "num": "009",
+      "name": "Blastoise",
+      "img": "http://www.serebii.net/pokemongo/pokemon/009.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.60 m",
+      "weight": "85.5 kg",
+      "candy": "Squirtle Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0067,
+      "avg_spawns": 0.67,
+      "spawn_time": "00:06",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [{
+        "num": "007",
+        "name": "Squirtle"
+      }, {
+        "num": "008",
+        "name": "Wartortle"
+      }]
+    },
+    { "id": 7,
+      "num": "007",
+      "name": "Squirtle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/007.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.51 m",
+      "weight": "9.0 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 0.58,
+      "avg_spawns": 58,
+      "spawn_time": "04:25",
+      "multipliers": [2.1],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [{
+        "num": "008",
+        "name": "Wartortle"
+      }, {
+        "num": "009",
+        "name": "Blastoise"
+      }]
+    }, {
+      "id": 8,
+      "num": "008",
+      "name": "Wartortle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/008.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "22.5 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "07:02",
+      "multipliers": [1.4],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [{
+        "num": "007",
+        "name": "Squirtle"
+      }],
+      "next_evolution": [{
+        "num": "009",
+        "name": "Blastoise"
+      }]
+    }];
+    test('sortData con parámetros de aToZ debería devolver los pokémon ordenado por nombre', () => {
+      expect(sortData(untidyPoke, "name", "aToZ")).toStrictEqual(tidyPoke);
+    });
+
+    test('sortData con parámetros de zToA debería devolver los pokémon ordenado por nombre de la Z a la A', () => {
+      expect(sortData(untidyPoke, "name", "zToA")).toStrictEqual(tidyPoke.reverse());
+    });    
   });
+    

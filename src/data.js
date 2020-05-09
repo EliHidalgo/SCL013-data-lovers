@@ -10,6 +10,7 @@ export const anotherExample = () => {
 import pokemon from './data/pokemon/pokemon.js';
 
 const pokemonDatos = pokemon.pokemon;
+//console.log(pokemonDatos);
 
 export const imgOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.img);
@@ -51,22 +52,10 @@ export const nextEvolutionOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.next_evolution);
 }
 
-export function sortByName(a, b) {
-  if (a.name < b.name) {
-    return -1;
+export const sortData = (data, sortBy, condition) => {
+  if (condition === "aToZ") {
+    return data.sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1);
+  } else {
+    return data.sort((a, b) => (a[sortBy] < b[sortBy]) ? 1 : -1);
   }
-  return 1;
 }
-
-export const sortData = (data, condition) => {
-  let sorted = [];
-
-  if (condition === 'aToZ') {
-    sorted = data.sort(sortByName);
-  }
-  if (condition === 'zToA') {
-    sorted = data.sort(sortByName).reverse();
-  }
-  return sorted;
-};
-
