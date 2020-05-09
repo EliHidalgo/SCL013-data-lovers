@@ -278,7 +278,6 @@ option {
   font-size: 100%;
   font-family: sans-serif;
   font-style: normal;
-  /*background-color: blueviolet;*/
   margin-bottom: 2%;
   color: rgba(0, 0, 0, 0.4);
 }
@@ -286,7 +285,6 @@ option {
 /*contenedor principal de las cards de pokémon*/
 #root {
   text-align: left;
-  /*background-color: blue;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -323,7 +321,6 @@ option {
 
 /*estilo al nombre del pokémon en la card chica*/
 #pokemonNameCard {
-  /*background-color: darkgray;*/
   align-self: center;
   font-size: 18px;
   font-weight: bold;
@@ -331,9 +328,6 @@ option {
 
 /*estilo imagen pokemon en card chica*/
 #imgPokemonCard {
-  /*background-color: burlywood;
-    border-color: darkcyan;
-    border-style: double;*/
   display: flex;
   align-self: center;
 }

@@ -1,16 +1,6 @@
-// estas funciones son de ejemplo
-/*
-export const example = () => {
-  return 'example';
-};
-export const anotherExample = () => {
-  return 'OMG';
-};*/
-
 import pokemon from './data/pokemon/pokemon.js';
 
 const pokemonDatos = pokemon.pokemon;
-//console.log(pokemonDatos);
 
 export const imgOfPokemon = (newFilter, condition) => {
   return pokemonDatos.filter((pokemon) => pokemon[newFilter].includes(condition)).map((pokemon) => pokemon.img);

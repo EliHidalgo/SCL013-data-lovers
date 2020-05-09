@@ -100,7 +100,6 @@ selectFilterByTypePokemon.addEventListener('change', () => {
   }
 });
 
-
 //variable para el id del selectWeak, seleccionando contra que es débil el pokémon
 const selectFilterByWeaknessOfPokemon = document.getElementById("selectWeak");
 
