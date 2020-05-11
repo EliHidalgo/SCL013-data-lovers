@@ -22,13 +22,11 @@ section label {
 
 #btn-menu-responsive {
   display: none;
-  width: 100%;
-  display: none;
 }
 
 .btn-menu {
   color: #FFFFFF;
-  background-color: #FB272A;
+  /*background-color: #FB272A;*/
   font-size: 30px;
   font-weight: bold;
   padding: 10px 0px 10px 10px;
@@ -123,6 +121,7 @@ option {
     margin-left: -60%;
     transition: all 0.8s;
     padding-bottom: 8px;
+    -webkit-appearance: none;
   }
 
   #btn-menu-responsive:checked~#menu {
@@ -143,6 +142,7 @@ option {
     font-size: 10px;
     margin-left: 10px;
     margin-bottom: 5px;
+    -webkit-appearance: none;
   }
 
   .droplists:hover {
@@ -157,6 +157,7 @@ option {
   h1 {
     font-size: 120%;
     padding-top: 10%;
+    
   }
 
   p {
@@ -193,6 +194,7 @@ option {
   #topMessageOfType {
     font-size: 2px;
     margin-top: 63px;
+    -webkit-margin-top-collapse: separate;
   }
 
   #root {
