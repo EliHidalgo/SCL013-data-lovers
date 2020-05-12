@@ -38,6 +38,14 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 
 **Para**: identificar de que trata la página y si me sirve o no.
 
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+
+
 **Criterios de aceptación:**
 
 - Nombre o logo de la página.
@@ -52,10 +60,19 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 
 **Para**:poder filtrar por el tipo de Pokémon que me interese y ver su respectiva información.
 
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+- Cumple con los criterios de aceptación.
+
+
 **Criterios de aceptación:**
 
 - Botón tipo de Pokémon.
-- Que despliegue los tipos se Pokémon existentes.
+- Que despliegue los tipos de Pokémon existentes.
 - Que permita seleccionar un tipo de Pokémon en específico.
 - Que muestre todos los Pokémon del tipo seleccionado por el usuario.
 
@@ -66,6 +83,14 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 **Quiero**: un botón de ordenar por.
 
 **Para**: poder filtrar alfabéticamente mis Pokémon.
+
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+- Cumple con los criterios de aceptación.
 
 **Criterios de aceptación:**
 
@@ -82,6 +107,15 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 
 **Para**: buscar directamente el Pokémon que me interesa y revisar su información.
 
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+- Cumple con los criterios de aceptación.
+
+
 **Criterios de aceptación:**
 
 - Input tipo texto de búsqueda.
@@ -95,6 +129,15 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 **Quiero**: un botón de debilidades contra un tipo específico de Pokémon.
 
 **Para**: poder filtrar por el tipo de debilidad que requiero investigar y determinar que Pokémon escoger para una batalla.
+
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+- Cumple con los criterios de aceptación.
+
 
 **Criterios de aceptación:**
 
@@ -110,6 +153,14 @@ Esta aplicación esta creada para entrenadores PoKémon, los cuales ya tienen ex
 **Quiero**: saber las características de mi Pokémon.
 
 **Para**: poder tomar decisiones en cuanto a mis Pokémon actuales o los que deseo conseguir.
+
+**Definición de Terminado:**
+
+- El código está en el repositorio remoto.
+- El código pasa el mínimo porcentaje de test aceptado.
+- La historia implementada fue testeada por mínimo 2 usuarios.
+- Se realizaron las mejoras detectadas en el testeo de usabilidad.
+- Cumple con los criterios de aceptación.
 
 **Criterios de aceptación:**
 
@@ -230,9 +281,12 @@ Feedback:
 
 Finalmente según el feedback que nos estregaron los testeos de usabilidad, llegamos a la vista final de nuestra pagina web.
 
+
+https://elihidalgo.github.io/SCL013-data-lovers/src/index.html
+
 ### Version Desktop.
 
-![Primera pantalla logo]
+![Primera pantalla logo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Primera%20pantalla%20logo.PNG?raw=true)
 
 ![Pantalla de inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Pantalla%20de%20inicio-explicativa.PNG?raw=true)
 
@@ -246,12 +300,9 @@ Finalmente según el feedback que nos estregaron los testeos de usabilidad, lleg
 
 ### Versión Celular.
 
-![Pantalla inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile1.PNG?raw=true)
-
-![Pantalla inicio-explicativa](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/version%20mobile2.PNG?raw=true)
-
-![Filtrado por tipo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile3.PNG?raw=true)
-
-![Filtrado por debilidad](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile4.PNG?raw=true)
-
-![ordenado de la A-Z](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile5.PNG?raw=true)
+![Pantalla inicio]
+![Pantalla inicio-explicativa]
+![Filtrado por tipo]
+![Filtrado por debilidad]
+![ordenado de la A-Z]
+![Búsqueda PoKémon]
