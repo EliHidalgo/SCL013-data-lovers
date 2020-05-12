@@ -27,11 +27,9 @@ section label {
 
 .btn-menu {
   color: #FFFFFF;
-  /*background-color: #FB272A;*/
   font-size: 33px;
   font-weight: bold;
   padding: 10px 0px 10px 10px;
-  /*margin-top: 4px;*/
 }
 
 #menuResponsive {
@@ -39,15 +37,12 @@ section label {
   height: 55px;
   display: flex;
   width: 100%;
-  /*flex-direction: row;*/
-  /*justify-items: space-around;*/
 }
 
 .btn-menu:hover {
   cursor: pointer;
   color: #FFC800;
   font-size: 35px;
-  /*padding-bottom: 5%;*/
 }
 
 /*estilo menú desktop*/
@@ -55,9 +50,7 @@ section label {
   position: center;
   background: #FB272A;
   width: 75%;
-  /*height: 55px;*/
   left: 0px;
-  /*top: 555px;*/
   line-height: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -72,7 +65,6 @@ section label {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  /*margin-right: 100px;*/
   display: flex;
 }
 
@@ -97,7 +89,6 @@ section label {
 #searchInput {
   display: flex;
   align-items: center;
-  /*margin-right: 70px;*/
   color: #FFFFFF;
 }
 
@@ -117,20 +108,17 @@ option {
   }
   #menuResponsive {
     display: flex;
-    /*flex-direction: column;*/
+
   }
   #menu {
     position: absolute;
-    /*background: #FB272A;*/
     display: flex;
-    /*top: 280px;*/
     margin-top: 50px;
     flex-direction: column;
     height: 15%;
     width: 60%;
     margin-left: -60%;
     transition: all 1s;
-    /*padding-bottom: 3px;*/
     -webkit-appearance: none;
   }
 
@@ -138,15 +126,10 @@ option {
     margin-left: 0;
   }
 
-  /*#menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }*/
+  
   #searchInput {
     display: flex;
-    /*-webkit-margin-start: 65px;*/
+   
   }
 
   .droplists {
@@ -239,7 +222,7 @@ option {
   text-align: left;
   font-size: 140%;
   font-family: sans-serif;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   padding-right: 5%;
   padding-left: 5%;
   flex-direction: column;

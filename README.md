@@ -209,6 +209,9 @@ Nuestro segundo prototipo de alta fidelidad fue modificado según el feedback qu
 
 https://www.figma.com/proto/tZcEPUiQNuc9UhXDsbbBJc/2do-PokeData-GO?node-id=0%3A1&scaling=min-zoom
 
+**Link a Zeplin**
+
+https://zpl.io/beEY9Gz
 
 ## 6. Test de Usabilidad :man_office_worker::writing_hand:
 
@@ -277,10 +280,23 @@ Feedback:
 - La distribución de la barra de menú es acertada, se ve bien en general.
 - En general los cambios entre el primer prototipo  y el segundo, son bastantes grandes, fueron drásticos y para mejor.
 
+### Maze.
+
+https://t.maze.design/11202779
+
+![Maze 1](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/maze1.PNG?raw=true)
+
+![Maze 2](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/maze2.PNG?raw=true)
+
+![Maze 3](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/maze3.PNG?raw=true)
+
+![Maze 4](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/maze4.PNG?raw=true)
+
+![Maze 5](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/maze5.PNG?raw=true)
+
 ## 7. Vista producto terminado.
 
 Finalmente según el feedback que nos estregaron los testeos de usabilidad, llegamos a la vista final de nuestra pagina web.
-
 
 https://elihidalgo.github.io/SCL013-data-lovers/src/index.html
 
@@ -300,9 +316,14 @@ https://elihidalgo.github.io/SCL013-data-lovers/src/index.html
 
 ### Versión Celular.
 
-![Pantalla inicio]
-![Pantalla inicio-explicativa]
-![Filtrado por tipo]
-![Filtrado por debilidad]
-![ordenado de la A-Z]
-![Búsqueda PoKémon]
+![Pantalla inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile1.PNG?raw=true)
+
+![Pantalla inicio-explicativa](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/version%20mobile%202.PNG?raw=true)
+
+![Filtrado por tipo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile3.PNG?raw=true)
+
+![Filtrado por debilidad](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile4.PNG?raw=true)
+
+![ordenado de la A-Z](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile5.PNG?raw=true)
+
+![Búsqueda PoKémon](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/version%20mobile6.PNG?raw=true)
