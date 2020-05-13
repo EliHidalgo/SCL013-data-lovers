@@ -24,6 +24,8 @@ const welcomeContainer = document.getElementById("welcomePage");
 selectFilterByTypePokemon.addEventListener('change', () => {
   //variable que reconoce cual de todos los options fue seleccionado en el droplist y te devulve el valor de ese option
   const droplistSelectType = selectFilterByTypePokemon.options[selectFilterByTypePokemon.selectedIndex].value;
+  //variable que toma el texto del option seleccionado para indicar cual se esta viendo en pantalla en el mensaje arriba de las cards
+  const droplistSelectTypeSpanish = selectFilterByTypePokemon.options[selectFilterByTypePokemon.selectedIndex].text;
   //creando las variables de string de la información que debe aparecer en las cards de cada pokémon
   const stringOfImgOfPokemon = imgOfPokemon("type", droplistSelectType);
   const stringOfNameOfPokemon = nameOfPokemon("type", droplistSelectType);
@@ -49,7 +51,7 @@ selectFilterByTypePokemon.addEventListener('change', () => {
 
   //mensaje que indica que tipo de pokémon se está viendo en pantalla
   let showingTypeOfPokemon = document.getElementById("topMessageOfType");
-  showingTypeOfPokemon.innerHTML = `<h2 class="showingType"> Tipo de Pokémon: ${droplistSelectType}</h2>`
+  showingTypeOfPokemon.innerHTML = `<h2 class="showingType"> Tipo de Pokémon: ${droplistSelectTypeSpanish}</h2>`
 
   //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro de tipo
   for (let i = 0; i < stringOfTypeOfPokemon.length; i++) {
@@ -59,7 +61,7 @@ selectFilterByTypePokemon.addEventListener('change', () => {
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                 <h5 id="pokemonNameCard">${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h5>
-                                <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
     cardsContainer.appendChild(smallCard);
     welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la sección de root (cards container)
@@ -75,12 +77,12 @@ selectFilterByTypePokemon.addEventListener('change', () => {
     modalCard.appendChild(modalCardInformation);
     modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                           <h2>${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h2>
-                                          <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                           <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Caramelo: </span>${stringOfCandyOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${stringOfCandyCountOfPokemon[i]}</p>
-                                          <p><span class="modalPokemon">Debilidades: </span>${stringOfWeaknessesOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Debilidades: </span>${replace(stringOfWeaknessesOfPokemon[i])}</p>
                                           <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : "No tiene más evoluciones"}</p>`;
 
 
@@ -113,6 +115,8 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
 
   //variable que reconoce cual de todos los options fue seleccionado en el droplist y te devulve el valor de ese option
   const droplistSelectWeakness = selectFilterByWeaknessOfPokemon.options[selectFilterByWeaknessOfPokemon.selectedIndex].value;
+  //variable para tomar el texto del option seleccionado, para el mensaje que se muestra arriba del contenedor de las cards
+  const droplistSelectWeaknessSpanish = selectFilterByWeaknessOfPokemon.options[selectFilterByWeaknessOfPokemon.selectedIndex].text;
   //creando las variables de string de la información que debe aparecer en las cards de cada pokémon
   const stringOfImgOfPokemon = imgOfPokemon("weaknesses", droplistSelectWeakness);
   const stringOfNameOfPokemon = nameOfPokemon("weaknesses", droplistSelectWeakness);
@@ -134,7 +138,7 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
 
   //mensaje que indica contra que debilidad se está viendo en pantalla 
   let showingWeaknessOfPokemon = document.getElementById("topMessageOfType");
-  showingWeaknessOfPokemon.innerHTML = `<h2 class="showingType"> Debilidad contra tipo: ${droplistSelectWeakness}</h2>`
+  showingWeaknessOfPokemon.innerHTML = `<h2 class="showingType"> Debilidad contra tipo: ${droplistSelectWeaknessSpanish}</h2>`
 
   //ciclo para imprimir las cards pequeñas de pokémon por separado, cuando se selecciona el filtro por debilidad
   for (let i = 0; i < stringOfNameOfPokemon.length; i++) {
@@ -144,7 +148,7 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                 <h5 id="pokemonNameCard">${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h5>
-                                <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
     cardsContainer.appendChild(smallCard);
     welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la sección de root (cards container)
@@ -160,12 +164,12 @@ selectFilterByWeaknessOfPokemon.addEventListener('change', () => {
     modalCard.appendChild(modalCardInformation);
     modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                           <h2>${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h2>
-                                          <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                           <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">Caramelo: </span>${stringOfCandyOfPokemon[i]}</p>
                                           <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${stringOfCandyCountOfPokemon[i]}</p>
-                                          <p><span class="modalPokemon">Debilidades: </span>${stringOfWeaknessesOfPokemon[i]}</p>
+                                          <p><span class="modalPokemon">Debilidades: </span>${replace(stringOfWeaknessesOfPokemon[i])}</p>
                                           <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : "No tiene más evoluciones"}</p>`;
 
     //creación del botón de cerrar el modal card de información de pokémon
@@ -211,7 +215,7 @@ document.getElementById("selectOrder").addEventListener('change', () => {
     smallCard.setAttribute("id", "divSmallCardPokemon");
     smallCard.innerHTML += `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
                                 <h5 id="pokemonNameCard">${pokeOrdered[i].name} #${pokeOrdered[i].num}</h5>
-                                <p><span class="modalPokemon">Tipo: </span>${pokeOrdered[i].type}</p>
+                                <p><span class="modalPokemon">Tipo: </span>${replace(pokeOrdered[i].type)}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
     cardsContainer.appendChild(smallCard);
     welcomeContainer.innerHTML = " ";
@@ -227,12 +231,12 @@ document.getElementById("selectOrder").addEventListener('change', () => {
     modalCard.appendChild(modalCardInformation);
     modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${pokeOrdered[i].img}>
                                           <h2>${pokeOrdered[i].name} #${pokeOrdered[i].num}</h2>
-                                          <p><span class="modalPokemon">Tipo: </span>${pokeOrdered[i].type}</p>
+                                          <p><span class="modalPokemon">Tipo: </span>${replace(pokeOrdered[i].type)}</p>
                                           <p><span class="modalPokemon">Altura: </span>${pokeOrdered[i].height}</p>
                                           <p><span class="modalPokemon">Peso: </span>${pokeOrdered[i].weight}</p>
                                           <p><span class="modalPokemon">Caramelo: </span>${pokeOrdered[i].candy}</p>
                                           <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${pokeOrdered[i].candy_count}</p>
-                                          <p><span class="modalPokemon">Debilidades: </span>${pokeOrdered[i].weaknesses}</p>
+                                          <p><span class="modalPokemon">Debilidades: </span>${replace(pokeOrdered[i].weaknesses)}</p>
                                           <p><span class="modalPokemon">Evolución: </span>${pokeOrdered[i].next_evolution ? pokeOrdered[i].next_evolution[0].name : "No tiene más evoluciones"}</p>`;
 
     //creación del botón de cerrar el modal card de información de pokémon
@@ -291,7 +295,7 @@ document.getElementById('searchBar').addEventListener('keydown', (evt) => {
       smallCard.setAttribute("id", "divSmallCardPokemon");
       smallCard.innerHTML += `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                 <h5 id="pokemonNameCard">${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h5>
-                                <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                 <p><span class="seeMorePopUp">Ver...</span></>`;
       cardsContainer.appendChild(smallCard);
       welcomeContainer.innerHTML = " "; //borrar la sección de bienvenida para mostrar la sección de root (cards container)
@@ -307,12 +311,12 @@ document.getElementById('searchBar').addEventListener('keydown', (evt) => {
       modalCard.appendChild(modalCardInformation);
       modalCardInformation.innerHTML = `<img id="imgPokemonCard" src= ${stringOfImgOfPokemon[i]}>
                                    <h2>${stringOfNameOfPokemon[i]} #${stringOfNumOfPokemon[i]}</h2>
-                                   <p><span class="modalPokemon">Tipo: </span>${stringOfTypeOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Tipo: </span>${replace(stringOfTypeOfPokemon[i])}</p>
                                    <p><span class="modalPokemon">Altura: </span>${stringOfHeightOfPokemon[i]}</p>
                                    <p><span class="modalPokemon">Peso: </span>${stringOfWeightOfPokemon[i]}</p>
                                    <p><span class="modalPokemon">Caramelo: </span>${stringOfCandyOfPokemon[i]}</p>
                                    <p><span class="modalPokemon">N° de Caramelos para evolucionar: </span>${stringOfCandyCountOfPokemon[i]}</p>
-                                   <p><span class="modalPokemon">Debilidades: </span>${stringOfWeaknessesOfPokemon[i]}</p>
+                                   <p><span class="modalPokemon">Debilidades: </span>${replace(stringOfWeaknessesOfPokemon[i])}</p>
                                    <p><span class="modalPokemon">Evolución: </span>${stringOfNextEvolutionOfPokemon[i] ? stringOfNextEvolutionOfPokemon[i][0].name : "No tiene más evoluciones"}</p>`;
 
 
@@ -332,3 +336,50 @@ document.getElementById('searchBar').addEventListener('keydown', (evt) => {
     }
   }
 });
+
+//función para reemplazar de inglés a español
+function replace(data) {
+  let newArray = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] == ["Grass"]) {
+      newArray.push(["Planta"]);
+    } else if (data[i] == ["Poison"]) {
+      newArray.push(["Veneno"]);
+    } else if (data[i] == ["Fire"]) {
+      newArray.push(["Fuego"]);
+    } else if (data[i] == ["Ice"]) {
+      newArray.push(["Hielo"]);
+    } else if (data[i] == ["Flying"]) {
+      newArray.push(["Volador"]);
+    } else if (data[i] == ["Psychic"]) {
+      newArray.push(["Psíquicos"]);
+    } else if (data[i] == ["Water"]) {
+      newArray.push(["Agua"]);
+    } else if (data[i] == ["Ground"]) {
+      newArray.push(["Tierra"]);
+    } else if (data[i] == ["Rock"]) {
+      newArray.push(["Roca"]);
+    } else if (data[i] == ["Electric"]) {
+      newArray.push(["Eléctrico"]);
+    } else if (data[i] == ["Bug"]) {
+      newArray.push(["Bicho"]);
+    } else if (data[i] == ["Normal"]) {
+      newArray.push(["Normal"]);
+    } else if (data[i] == ["Fighting"]) {
+      newArray.push(["Pelea"]);
+    } else if (data[i] == ["Fairy"]) {
+      newArray.push(["Hada"]);
+    } else if (data[i] == ["Ghost"]) {
+      newArray.push(["Fantasma"]);
+    } else if (data[i] == ["Dark"]) {
+      newArray.push(["Siniéstro"]);
+    } else if (data[i] == ["Steel"]) {
+      newArray.push(["Metal"]);
+    } else if (data[i] == ["Dragon"]) {
+      newArray.push(["Dragón"]);
+    } else {
+      newArray.push(["No aplica"]);
+    }
+  }
+  return newArray;
+}
