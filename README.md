@@ -304,7 +304,7 @@ https://elihidalgo.github.io/SCL013-data-lovers/src/index.html
 
 ![Primera pantalla logo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Primera%20pantalla%20logo.PNG?raw=true)
 
-![Pantalla de inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Pantalla%20de%20inicio-explicativa.PNG?raw=true)
+![Pantalla de inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/pantalla%20inicio-explicativa.PNG?raw=true)
 
 ![Filtrado por tipo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Filtrando%20por%20tipo.PNG?raw=true)
 
@@ -318,7 +318,7 @@ https://elihidalgo.github.io/SCL013-data-lovers/src/index.html
 
 ![Pantalla inicio](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile1.PNG?raw=true)
 
-![Pantalla inicio-explicativa](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/version%20mobile%202.PNG?raw=true)
+![Pantalla inicio-explicativa](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/pantalla%20mobile2.PNG?raw=true)
 
 ![Filtrado por tipo](https://github.com/paula-plaza/SCL013-data-lovers/blob/master/src/imagenes/Version%20mobile3.PNG?raw=true)
 
