@@ -2,6 +2,7 @@
 * {
   font-family: sans-serif;
 }
+
 body {
   margin: 0px;
   -webkit-margin-bottom-collapse: discard;
@@ -136,15 +137,12 @@ option {
 
 #footer {
   background-color: #FB272A;
-  /*height: 30px;*/
+  height: 30px;
   display: flex;
-  /*position: fixed;*/
-  margin-top: 40px;
-  /*margin-bottom: 0;*/
-  /*-webkit-margin-top-collapse: separate;*/
+  margin-top: 50px;
   bottom: 0;
   left: 0;
-  right: 0;  
+  right: 0;
 }
 
 .footerCopyright {
@@ -192,6 +190,10 @@ option {
   margin: 2%;
 }
 
+.rootHeight {
+  min-height: calc(100vh - 278px - 30px);
+}
+
 /*card de pokémon*/
 .smallCardStyle {
   background-color: rgba(255, 255, 255, 0.9);
@@ -200,6 +202,7 @@ option {
   box-sizing: border-box;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.70);
   width: 15%;
+  height: 27%;
   margin: 2%;
   display: flex;
   flex-direction: column;
@@ -315,6 +318,7 @@ option {
   color: black;
   font-size: 40px;
 }
+
 @media screen and (max-width: 980px) {
 
   #logo {
@@ -344,7 +348,6 @@ option {
   #btn-menu-responsive:checked~#menu {
     margin-left: 0;
   }
-
 
   #searchInput {
     display: flex;

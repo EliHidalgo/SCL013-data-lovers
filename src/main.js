@@ -284,6 +284,7 @@ document.getElementById('searchBar').addEventListener('keydown', (evt) => {
 
     //borra todos los hijos que pueda tener la sección de root
     const cardsContainer = document.getElementById("root");
+    cardsContainer.classList.add("rootHeight");
     while (cardsContainer.hasChildNodes()) {
       cardsContainer.removeChild(cardsContainer.firstChild);
     }
